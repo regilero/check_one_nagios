@@ -10,7 +10,7 @@ Maybe you have an old nagios instance running, while the new instance is also ru
 
 This should'nt happend. But I've been hit by that several time. the check_nagios check script can only detect you have at least one nagios process. but nagios can run a lot of forked/parallel process and it's hard to detect which ones are the main process.
 
-Well finally I sax that on my linux server a psauxf|grep nagios will render a STATUS column where the main Nagios process have the "Ssl" status and the othersonly "S". And when I have two (or even 3) "Ssl" status nagios process bad things happen. So I wrote this simple bash script to be uased as a classical nagios check and detect I have more than one nagios process in "Ssl" status.
+Well finally I sax that on my linux server a ps auxf|grep nagios will render a STATUS column where the main Nagios process have the "Ssl" status and the othersonly "S". And when I have two (or even 3) "Ssl" status nagios process bad things happen. So I wrote this simple bash script to be uased as a classical nagios check and detect I have more than one nagios process in "Ssl" status.
 
 USAGE: check_one_nagios [OPTIONS]
 
